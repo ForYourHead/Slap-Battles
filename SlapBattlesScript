@@ -1,0 +1,50 @@
+-- Don't skid pls
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+local PhantomForcesWindow = Library:NewWindow("[HALLOWEEN] Slap Battles")
+local KillingCheats = PhantomForcesWindow:NewSection("Main")
+KillingCheats:CreateToggle("Auto Collect Candy", function(value)
+_G.Condition = true
+while _G.Condition == true do
+local children = game.Workspace.CandyCorns:GetChildren()
+for _, child in pairs(children) do
+   for _, child in pairs(child:GetChildren()) do
+       table.insert(children, child)
+   end
+
+   if child:IsA("Part") then
+           child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+       end
+end
+wait()
+    end
+print(value)
+end)
+KillingCheats:CreateButton("Stop Collecting", function()
+_G.Condition = false
+while _G.Condition == true do
+local children = game.Workspace.CandyCorns:GetChildren()
+for _, child in pairs(children) do
+   for _, child in pairs(child:GetChildren()) do
+       table.insert(children, child)
+   end
+
+   if child:IsA("Part") then
+           child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+       end
+end
+wait()
+    end
+print("Boom")
+end)
+KillingCheats:CreateButton("Teleport To Safe", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3615.61035, 82.5088654, 7.00117397, -0.138640478, 2.62486406e-08, -0.990342796, -7.12410708e-09, 1, 2.75019225e-08, 0.990342796, 1.08681872e-08, -0.138640478)
+print("Boom")
+end)
+KillingCheats:CreateButton("ANTI AFK", function()
+loadstring(game:HttpGet("https://freenote.biz/raw/pULVxVQaQY"))()
+print("hello")
+end)
+local KillingCheats = PhantomForcesWindow:NewSection("Youtube: r4mpage")
+KillingCheats:CreateButton("SUBSCRIBE", function()
+print("HI")
+end)
